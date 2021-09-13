@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  border: none;
+  gap: 20px;
+  /* transform: rotate(-5deg); */
+}
+
+.menu div {
+  width: 70px;
+  height: 70px;
+}
+
+.menu div button {
+  padding: 5px;
+  border: none;
+  background: none;
+  box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+  background: crimson;
+  width: 70px;
+}
+
+.menu div button::before {
+  position: relative;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+
+  border: 6px solid transparent;
+  border-right: 6px solid hsl(16, 100%, 30%);
+  border-left-width: 0;
+  top: -5px;
+  left: -11px;
+}
+
+.menu div button::after {
+  position: relative;
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+
+  border: 6px solid transparent;
+  border-top: 6px solid hsl(16, 100%, 30%);
+  border-bottom-width: 0;
+  left: 53px;
+  bottom: -11px;
+}
+
+.menu div button:hover {
+  transform: scale(1.2);
+}
+
+.menu div button.facebook {
+  background: #4267b2;
+  color: #fff;
+  box-shadow: -6px 6px 0 hsl(220, 50%, 30%);
+}
+
+.menu div button.facebook::before {
+  border-right: 6px solid hsl(220, 50%, 30%);
+}
+
+.menu div button.facebook::after {
+  border-top: 6px solid hsl(220, 50%, 30%);
+}
